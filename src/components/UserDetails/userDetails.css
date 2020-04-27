@@ -1,0 +1,4 @@
+.user-details-modal > .modal-dialog{
+    max-width: none;
+    width: 90%
+}

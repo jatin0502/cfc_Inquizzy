@@ -1,0 +1,17 @@
+#alerts{
+top: 1rem;
+right: 1rem;
+animation-name: slide;
+animation-duration: 5s;
+animation-fill-mode: forwards;
+width: 100%;
+}
+
+.alert {
+    width: 100%;
+}
+
+@keyframes slide{
+    from{top: 1rem;}
+    to{top: 35rem; background-color: white}
+}

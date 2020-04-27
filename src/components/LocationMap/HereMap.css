@@ -1,0 +1,29 @@
+#current_location_icon {
+    height: 30px;
+    width: 30px;
+    padding-right: 30px;
+    margin-bottom: -100px;
+    z-index: -1;
+    position: relative;
+}
+
+#current_location_icon_div {
+    z-index: -1;
+    position: relative;
+}
+
+.button.here-ctrl-icon {
+    width: 25px;
+    height: 25px;
+    margin: 2px 0 0 2px;
+}
+
+.current_location_button {
+    background: url("current_location.png") no-repeat center;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    height: 25px;
+    width: 25px;
+}

@@ -1,0 +1,49 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha --timeout 100000 --exit",
+    "start": "set DEBUG=app, app:* & nodemon server.js",
+    "lint": "eslint server.js models/** --ext .js",
+    "fixlint": "eslint server.js models/** --ext .js --fix"
+  },
+  "author": "Debabrata Maji",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.19.0",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-http": "^4.3.0",
+    "chalk": "2.4.2",
+    "cors": "2.8.5",
+    "debug": "4.1.1",
+    "express": "4.17.1",
+    "express-jwt": "^5.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^6.2.0",
+    "mongoose": "5.6.11",
+    "morgan": "1.9.1",
+    "nodemon": "1.19.2",
+    "path-to-regexp": "^3.1.0",
+    "sinon": "^7.4.2",
+    "sinon-chai": "^3.3.0",
+    "supertest": "^4.0.2"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "delay": "2500",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 4000,
+      "MONGOSERVER": "127.0.0.1:27017",
+      "COLLECTION": "coviddata"
+    }
+  },
+  "devDependencies": {
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2"
+  }
+}

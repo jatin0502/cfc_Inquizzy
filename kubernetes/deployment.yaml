@@ -1,0 +1,31 @@
+# Update <REGISTRY> <NAMESPACE> values before use
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inquizzy
+  labels:
+    app: inquizzy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: inquizzy
+  template:
+    metadata:
+      labels:
+        app: inquizzy
+    spec:
+      containers:
+      - name: inquizzy
+        image: <REGISTRY>/<NAMESPACE>/myapp:v1.0.0
+        ports:
+        - containerPort: 3000
+        imagePullPolicy: Always
+        env:
+        - name: CLOUDANT_URL
+          valueFrom:
+            secretKeyRef:
+              name: cloudant
+              key: url
+              optional: true
+

@@ -1,0 +1,9 @@
+.hide-element {
+    display: hidden;
+}
+
+.mapdiv {
+    padding-left: 20px;
+    width: 400px;
+    height: 400px;
+}
